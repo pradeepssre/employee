@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: EmployeeService
+  datasource:
+    url: jdbc:postgresql://${DB_SERVER:localhost}:${DB_PORT:5432}/employeedb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+service:
+  department:
+    url: http://localhost:${DEPARTMENT_SERVICE_PORT:8080}
+server:
+  port: ${EMPLOYEE_SERVICE_PORT:8081}
