@@ -15,6 +15,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 service:
   department:
-    url: http://localhost:${DEPARTMENT_SERVICE_PORT:8080}
+    url: ${DEPT_URL:http://localhost:8080}
 server:
   port: ${EMPLOYEE_SERVICE_PORT:8081}
